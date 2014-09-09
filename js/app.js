@@ -8,7 +8,7 @@ angular.module("babyAmazon",
 
     $routeProvider
       .when("/", {
-        templateUrl: "views/listOfProducts.html",
+        templateUrl: "views/productViews/listOfProducts.html",
         controller: "homeCtrl"
       })
 
