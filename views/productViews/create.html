@@ -1,0 +1,13 @@
+<div class="container">
+  <form ng-submit="create(newProduct)">
+    <h2>Item: </h2>
+    <input type="text" ng-model="newProduct.name">
+    <h2>Price: </h2>
+    <input type="number" ng-model="newProduct.cost">
+    <h2>Image:</h2>
+    <input type="text" ng-model="newProduct.image">
+    <h2>Description: </h2>
+    <textarea cols="30" rows="10" ng-model="newProduct.description"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</div>

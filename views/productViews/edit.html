@@ -1,0 +1,14 @@
+<div class="container">
+  <form ng-submit="editProduct()">
+    <h2>Item: </h2>
+    <input type="text" ng-model="soloProduct.name">
+    <h2>Price: </h2>
+    <input type="number" ng-model="soloProduct.cost">
+    <h2>Image:</h2>
+    <input type="text" ng-model="soloProduct.image">
+    <h2>Description: </h2>
+    <textarea cols="30" rows="10" ng-model="soloProduct.description"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+
+</div>
