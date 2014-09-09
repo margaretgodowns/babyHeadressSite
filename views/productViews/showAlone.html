@@ -1,8 +1,10 @@
 <div class="container">
-  <img ng-src="{{product.image}}"/>
-  <h2>{{product.name}}</h2>
-  <h2>{{product.price}}</h2>
+  <img ng-src="{{soloProduct.image}}"/>
+  <h2>{{soloProduct.name}}</h2>
+  <h2>{{soloProduct.price}}</h2>
   <p>
-    {{product.description}}
+    {{soloProduct.description}}
   </p>
+  <a href="#/showAlone/{{idx}}/edit">Edit</a>
+  <a href="" ng-click="deleteProduct()">Delete</a>
 </div>

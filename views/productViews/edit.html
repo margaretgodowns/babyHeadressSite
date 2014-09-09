@@ -1,13 +1,13 @@
 <div class="container">
-  <form ng-submit="editProduct()">
+  <form ng-submit="editProduct(soloProduct)">
     <h2>Item: </h2>
-    <input type="text" ng-model="soloProduct.name">
+    <input type="text" ng-model="soloProduct.name" value="{{soloProduct.name}}">
     <h2>Price: </h2>
-    <input type="number" ng-model="soloProduct.cost">
+    <input type="number" ng-model="soloProduct.price" value="{{soloProduct.price}}">
     <h2>Image:</h2>
-    <input type="text" ng-model="soloProduct.image">
+    <input type="text" ng-model="soloProduct.image" value="{{soloProduct.image}}">
     <h2>Description: </h2>
-    <textarea cols="30" rows="10" ng-model="soloProduct.description"></textarea>
+    <textarea cols="30" rows="10" ng-model="soloProduct.description">{{soloProduct.description}}</textarea>
     <button type="submit">Submit</button>
   </form>
 

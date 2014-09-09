@@ -33,7 +33,7 @@ angular.module("localProducts")
       return _inventory;
     };
 
-    var getProduct = function(){
+    var getProduct = function(index){
       return _inventory[index];
     };
 
@@ -43,12 +43,13 @@ angular.module("localProducts")
       $log.info("product:added");
     };
 
-    var editProduct = function(){
+    var editProduct = function(product, idx){
+      _inventory[idx]=product;
       $rootScope.$broadcast("product:edited");
       $log.info("product:edited");
     };
 
-    var deleteProduct = function(){
+    var deleteProduct = function(index){
       _inventory.splice(index, 1);
       $rootScope.$broadcast("product:deleted");
       $log.info("product:deleted");

@@ -16,15 +16,15 @@ angular.module("localProducts",
         controller: "localProductsCtrl"
       })
 
-      .when("/showAlone/:index", {
+      .when("/showAlone/:idx", {
         templateUrl: "views/productViews/showAlone.html",
         controller: "localProductsCtrl"
       })
 
-      .when("/edit/:index", {
+      .when("/showAlone/:idx/edit", {
         templateUrl: "views/productViews/edit.html",
         controller: "localProductsCtrl"
-
       });
+
 
   });

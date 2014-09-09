@@ -3,14 +3,16 @@ angular.module("localProducts")
   .controller("localProductsCtrl", function($scope, localProductsSvc, $routeParams, $location, $rootScope){
 
     $scope.inventory = localProductsSvc.getInventory();
-    $scope.soloProduct = localProductsSvc.getItem($routeParams.index);
+    $scope.soloProduct = localProductsSvc.getProduct($routeParams.idx);
+    $scope.idx = $routeParams.idx;
+    console.log($scope.soloProduct)
 
     $scope.create = function(product){
 
-      localProductsSvc.addInventoryItem({
+      localProductsSvc.addProduct({
 
         name: product.name,
-        price: product.cost,
+        price: product.price,
         description: product.description,
         image: product.image
 
@@ -20,13 +22,26 @@ angular.module("localProducts")
 
     };
 
-    $routeScope.$on("product:added", function(){
+    $rootScope.$on("product:added", function(){
       $scope.inventory = localProductsSvc.getInventory();
 
     });
 
     $scope.editProduct= function(product){
-      localProductsSvc.editInventoryItem()
+
+      localProductsSvc.editProduct({
+
+        name: product.name,
+        price: product.price,
+        description: product.description,
+        image: product.image
+
+      },
+
+      $scope.idx
+      
+      );
+
         $location.path("/");
 
     };
@@ -36,4 +51,16 @@ angular.module("localProducts")
       $scope.inventory = localProductsSvc.getInventory();
 
     });
+
+    $scope.deleteProduct = function() {
+
+      localProductsSvc.deleteProduct($scope.idx);
+
+    };
+
+    $rootScope.$on("product:deleted", function() {
+      $scope.inventory = localProductsSvc.getInventory();
+
+    });
+
   });
