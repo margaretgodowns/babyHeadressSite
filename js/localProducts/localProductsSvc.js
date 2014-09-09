@@ -62,7 +62,7 @@ angular.module("localProducts")
       addProduct:addProduct,
       editProduct:editProduct,
       deleteProduct:deleteProduct
-      
+
     }
 
 
