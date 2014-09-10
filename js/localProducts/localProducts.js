@@ -18,7 +18,7 @@ angular.module("localProducts",
 
       .when("/shoppingCart", {
         templateUrl: "views/productViews/shoppingCart.html",
-        controller: "localProductCtrl"
+        controller: "localProductsCtrl"
       })
 
       .when("/showAlone/:idx", {

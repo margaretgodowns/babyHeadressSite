@@ -15,7 +15,7 @@ angular.module("admin")
 
     };
 
-    //AM I USING POST AND PRODUCT CORRECTLY HERE vvvv ?
+
     var addProduct = function(product) {
       return $http.post(urlBase, product).then(function(response) {
         $rootScope.$broadcast("product:added");
@@ -48,4 +48,4 @@ angular.module("admin")
       deleteProduct: deleteProduct
 
     }
-  })
+  });

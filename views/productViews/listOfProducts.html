@@ -1,4 +1,9 @@
 <div class="container">
+  <p>
+    <a href="/#">Home</a>
+    <!-- <a href="#/listOfProducts">Products</a> -->
+    <a href="#/shoppingCart/">Shopping Cart</a>
+  </p>
   <div ng-repeat="product in inventory">
     <img ng-src="{{product.image}}"/>
     <h2><a href="/#/showAlone/{{$index}}">{{product.name}}</a></h2>
@@ -6,7 +11,7 @@
     <p>
       {{product.description}}
     </p>
-    <a href= "" ng-click="addToCart()">Add to Cart</a>
+    <a href= "" ng-click="addToCart(product)">Add to Cart</a>
   </div>
 
 </div>

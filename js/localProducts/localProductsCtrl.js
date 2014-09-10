@@ -3,6 +3,7 @@ angular.module("localProducts")
   .controller("localProductsCtrl", function($scope, localProductsSvc, $routeParams, $location, $rootScope){
 
     $scope.inventory = localProductsSvc.getInventory();
+    $scope.shoppingCart = localProductsSvc.getShoppingCart();
     $scope.soloProduct = localProductsSvc.getProduct($routeParams.idx);
     $scope.idx = $routeParams.idx;
     console.log($scope.soloProduct)
@@ -37,7 +38,7 @@ angular.module("localProducts")
 
       });
 
-      $location.path("/shoppingCart.html")
+      $location.path("/shoppingCart")
     };
 
     $rootScope.$on("product:addedToCart", function(){
