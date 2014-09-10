@@ -49,7 +49,7 @@ angular.module("localProducts")
       $log.info("product:edited");
     };
 
-    var deleteProduct = function(index){
+    var deleteProduct = function(idx){
       _inventory.splice(index, 1);
       $rootScope.$broadcast("product:deleted");
       $log.info("product:deleted");
@@ -64,15 +64,23 @@ angular.module("localProducts")
       return _shoppingCart;
     };
 
+    var getCartProduct = function(idx){
+      return _shoppingCart[index];
+    }
+
     var addToCart = function(product){
       _shoppingCart.push(product);
       $rootScope.$broadcast("product:addedToCart");
       $log.info("product: addedToCart");
     };
 
-    var getCartProduct = function(idx){
-      return _shoppingCart[index];
-    }
+    var removeFromCart = function(idx) {
+      _shoppingCart.splice(index, 1);
+      $rootScope.$broadcast("product:removed");
+      $log.info("product:removed")
+    };
+
+
 
 
 

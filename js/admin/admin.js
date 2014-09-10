@@ -2,7 +2,7 @@ angular.module("admin", ["ngRoute"])
   .config(function($routeProvider) {
 
   $routeProvider
-  
+
     .when("/admin", {
       templateUrl: "views/adminViews/adminListOfProducts.html",
       controller: "adminCtrl"
@@ -12,7 +12,7 @@ angular.module("admin", ["ngRoute"])
       templateUrl: "views/adminViews/adminShowAlone.html",
       controller: "adminCtrl"
     })
-    //IS THIS CORRECT?//
+    
     .when("/adminAddProduct", {
       templateUrl: "views/adminViews/adminAddProduct.html",
       controller: "adminCtrl"

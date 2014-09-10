@@ -38,7 +38,8 @@ angular.module("localProducts")
 
       });
 
-      $location.path("/shoppingCart")
+      $location.path("/listOfProducts")
+      //or ("/showAlone")
     };
 
     $rootScope.$on("product:addedToCart", function(){
@@ -46,6 +47,14 @@ angular.module("localProducts")
 
     });
 
+    $scope.removeFromCart = function() {
+      localProductsSvc.removeFromCart($scope.idx);
+    };
+
+    $rootScope.$on("product:removedFromCart", function() {
+      $scope.shoppingCart = localProductsSvc.getShoppingCart();
+
+    });
 
     $scope.editProduct= function(product){
 
