@@ -55,6 +55,25 @@ angular.module("localProducts")
       $log.info("product:deleted");
 
     };
+    var _shoppingCart = [];
+
+    var getShoppingCart = function(){
+      return _shoppingCart;
+    };
+
+    var getCartProduct = function(idx){
+      return _shoppingCart[index];
+    }
+
+    var addToCart = function(product){
+      _shoppingCart.push(product);
+      $rootScope.$broadcast("product:addedToCart");
+      $log.info("product: addedToCart");
+    };
+
+
+
+
 
     return {
 

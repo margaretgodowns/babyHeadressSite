@@ -1,6 +1,7 @@
 angular.module("babyAmazon",
   [
     "localProducts",
+    "admin",
     "ngRoute"
   ])
 
@@ -9,14 +10,10 @@ angular.module("babyAmazon",
     $routeProvider
 
       .when("/", {
-        templateUrl: "views/productViews/listOfProducts.html",
+        templateUrl: "views/main.html",
         controller: "homeCtrl"
       })
 
-      .when("/showAlone/:index", {
-        templateUrl: "views/productViews/showAlone.html",
-        controller: "homeCtrl"
-      })
 
       .otherwise({
         redirectTo: "/"

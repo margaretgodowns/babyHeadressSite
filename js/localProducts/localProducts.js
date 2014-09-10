@@ -16,6 +16,11 @@ angular.module("localProducts",
         controller: "localProductsCtrl"
       })
 
+      .when("/shoppingCart", {
+        templateUrl: "views/productViews/shoppingCart.html",
+        controller: "localProductCtrl"
+      })
+
       .when("/showAlone/:idx", {
         templateUrl: "views/productViews/showAlone.html",
         controller: "localProductsCtrl"

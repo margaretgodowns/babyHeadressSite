@@ -5,17 +5,16 @@
     <link rel="stylesheet" href="/styles/main.css" media="screen" title="no title" charset="utf-8">
   </head>
   <header>
-    <h1>mini iWearTheHeadress site</h1>
+    <h1>iweartheHeadress miniSite</h1>
     <nav>
       <p>
         <a href="/#">Home</a>
-      </p>
-      <p>
-        <a href="/#/create">Add New</a>
+        <a href="#/listOfProducts">Products</a>
+        <a href="#">Shopping Cart</a>
       </p>
     </nav>
   </header>
-  <body ng-app="babyAmazon">
+  <body class="homeBackground" ng-app="babyAmazon">
 
     <div class="container" ng-view>
 
@@ -33,6 +32,11 @@
 <script src="js/localProducts/localProducts.js"></script>
 <script src="js/localProducts/localProductsCtrl.js"></script>
 <script src="js/localProducts/localProductsSvc.js"></script>
+
+<!-- Admin Modules -->
+<script src="js/admin/admin.js"></script>
+<script src="js/admin/adminCtrl.js"></script>
+<script src="js/admin/adminSvc.js"></script>
 
   </body>
 </html>

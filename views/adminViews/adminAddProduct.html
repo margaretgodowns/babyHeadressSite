@@ -1,0 +1,13 @@
+<h2>Add Product</h2>
+<form ng-submit="addProduct(newProduct)" action="">
+  <h3>Name: </h3>
+  <input type="text" ng-model="newProduct.name">
+  <h4>Price: </h4>
+  <input type="number" ng-model="newProduct.price">
+  <h4>Image: </h4>
+  <input type="text" ng-model="newProduct.image">
+  <h4>Description: </h4>
+    <textarea name="productDescription" ng-model="newProduct.description" rows="8" cols="40"></textarea>
+    <button type="submit">Submit</button>
+
+</form>
