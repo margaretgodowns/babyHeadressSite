@@ -1,11 +1,11 @@
 <a href="#/admin">Products</a>
 <div class="container">
-  <img ng-src="{{soloProduct.image}}"/>
+  <img ng-src="{{soloProduct.image}}">
   <h2>{{soloProduct.name}}</h2>
   <h2>{{soloProduct.price}}</h2>
   <p>
-    {{soloProduct.description}}
+    {{product.description}}
   </p>
-  <a href="#/adminShowAlone/{{idx}}/edit">Edit</a>
+  <a href="#/admin/:{{idx}}/edit">Edit</a>
   <a href="" ng-click="deleteProduct(soloProduct._id)">Delete</a>
 </div>
