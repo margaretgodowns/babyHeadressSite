@@ -12,14 +12,14 @@ angular.module("admin", ["ngRoute"])
       templateUrl: "views/adminViews/adminShowAlone.html",
       controller: "adminCtrl"
     })
-    
+
     .when("/adminAddProduct", {
       templateUrl: "views/adminViews/adminAddProduct.html",
       controller: "adminCtrl"
     })
 
     .when("/admin/:id/edit", {
-      templateUrl: "views.adminViews/adminEdit.html",
+      templateUrl: "views/adminViews/adminEdit.html",
       controller: "adminCtrl"
     });
 

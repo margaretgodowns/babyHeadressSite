@@ -14,21 +14,21 @@ angular.module("admin")
 
     $scope.addProduct = function(product) {
       adminSvc.addProduct(product).then(function() {
-        $location.path("/adminAddProduct");
+        $location.path("#/admin");
       });
 
     };
 
     $scope.editProduct = function(product) {
       adminSvc.editProduct(product).then(function() {
-        $location.path("/admin");
+        $location.path("#/admin");
       });
 
     };
 
     $scope.removeProduct = function (id) {
       adminSvc.deleteProduct(id).then(function() {
-      adminSvc.getProducts().then($location.path("/admin"));
+      adminSvc.getProducts().then($location.path("#/admin"));
     });
 
     };
