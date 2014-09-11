@@ -1,1 +1,22 @@
+img {
+  height: 200px; }
 
+body {
+  background-image: url("../images/homeBackground.jpg"); }
+
+.container {
+  background-color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center; }
+  .container a {
+    color: black; }
+
+.enterNav {
+  text-align: center; }
+  .enterNav ul li {
+    display: inline-block; }
+    .enterNav ul li a {
+      font-family: 'Source Sans Pro', sans-serif;
+      text-decoration: none;
+      color: white;
+      font-size: 48px; }

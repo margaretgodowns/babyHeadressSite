@@ -1,5 +1,6 @@
-<a href="/#">Home</a>
 <div class="container">
+<a href="/#">Home</a>
+
   <div ng-repeat="product in products">
     <img ng-src="{{product.image}}"/>
     <h2><a href="/#/admin/:{{$idx}}">{{product.name}}</a></h2>

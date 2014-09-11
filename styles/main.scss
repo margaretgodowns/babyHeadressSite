@@ -1,3 +1,46 @@
+$font-stack: 'Source Sans Pro', sans-serif;
+//General Styles
+
 img{
-  height: 100px;
+  height: 200px;
+}
+
+body{
+  background-image: url("../images/homeBackground.jpg");
+}
+
+.container{
+  background-color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  a{
+    color: black;
+  }
+}
+
+//index.html//
+
+// .homeTitle{
+//   color: white;
+//   font-family: arial;
+//   text-align: center;
+//   font-size: 24px;
+//   font-weight: lighter;
+// }
+
+//main.html//
+.enterNav{
+  text-align: center;
+  ul{
+  li{
+    display: inline-block;
+    a{
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 48px;
+
+  }
+  }
+}
 }
