@@ -8,25 +8,25 @@ angular.module("localProducts")
     $scope.idx = $routeParams.idx;
     console.log($scope.soloProduct)
 
-    $scope.create = function(product){
+    // $scope.create = function(product){
+    //
+    //   localProductsSvc.addProduct({
+    //
+    //     name: product.name,
+    //     price: product.price,
+    //     description: product.description,
+    //     image: product.image
+    //
+    //   });
+    //
+    //   $location.path("/")
+    //
+    // };
 
-      localProductsSvc.addProduct({
-
-        name: product.name,
-        price: product.price,
-        description: product.description,
-        image: product.image
-
-      });
-
-      $location.path("/")
-
-    };
-
-    $rootScope.$on("product:added", function(){
-      $scope.inventory = localProductsSvc.getInventory();
-
-    });
+    // $rootScope.$on("product:added", function(){
+    //   $scope.inventory = localProductsSvc.getInventory();
+    //
+    // });
 
     $scope.addToCart = function(product) {
       localProductsSvc.addToCart({
@@ -47,8 +47,8 @@ angular.module("localProducts")
 
     });
 
-    $scope.removeFromCart = function() {
-      localProductsSvc.removeFromCart($scope.idx);
+    $scope.removeFromCart = function (idx) {
+      localProductsSvc.removeFromCart (idx);
     };
 
     $rootScope.$on("product:removedFromCart", function() {
@@ -56,41 +56,41 @@ angular.module("localProducts")
 
     });
 
-    $scope.editProduct= function(product){
+    // $scope.editProduct= function(product){
+    //
+    //   localProductsSvc.editProduct({
+    //
+    //     name: product.name,
+    //     price: product.price,
+    //     description: product.description,
+    //     image: product.image
+    //
+    //   },
+    //
+    //   $scope.idx
+    //
+    //   );
+    //
+    //     $location.path("/");
+    //
+    // };
+    //
+    // $rootScope.$on("product:edited", function(){
+    //
+    //   $scope.inventory = localProductsSvc.getInventory();
+    //
+    // });
 
-      localProductsSvc.editProduct({
-
-        name: product.name,
-        price: product.price,
-        description: product.description,
-        image: product.image
-
-      },
-
-      $scope.idx
-
-      );
-
-        $location.path("/");
-
-    };
-
-    $rootScope.$on("product:edited", function(){
-
-      $scope.inventory = localProductsSvc.getInventory();
-
-    });
-
-    $scope.deleteProduct = function() {
-
-      localProductsSvc.deleteProduct($scope.idx);
-
-    };
-
-    $rootScope.$on("product:deleted", function() {
-      $scope.inventory = localProductsSvc.getInventory();
-
-    });
+    // $scope.deleteProduct = function() {
+    //
+    //   localProductsSvc.deleteProduct($scope.idx);
+    //
+    // };
+    //
+    // $rootScope.$on("product:deleted", function() {
+    //   $scope.inventory = localProductsSvc.getInventory();
+    //
+    // });
 
 
   });

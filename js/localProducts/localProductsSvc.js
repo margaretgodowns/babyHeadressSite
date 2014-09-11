@@ -37,24 +37,24 @@ angular.module("localProducts")
       return _inventory[index];
     };
 
-    var addProduct = function(newProduct){
-      _inventory.push(newProduct);
-      $rootScope.$broadcast("product:added");
-      $log.info("product:added");
-    };
+    // var addProduct = function(newProduct){
+    //   _inventory.push(newProduct);
+    //   $rootScope.$broadcast("product:added");
+    //   $log.info("product:added");
+    // };
 
-    var editProduct = function(product, idx){
-      _inventory[idx]=product;
-      $rootScope.$broadcast("product:edited");
-      $log.info("product:edited");
-    };
+    // var editProduct = function(product, idx){
+    //   _inventory[idx]=product;
+    //   $rootScope.$broadcast("product:edited");
+    //   $log.info("product:edited");
+    // };
 
-    var deleteProduct = function(idx){
-      _inventory.splice(index, 1);
-      $rootScope.$broadcast("product:deleted");
-      $log.info("product:deleted");
-
-    };
+    // var deleteProduct = function(idx){
+    //   _inventory.splice(index, 1);
+    //   $rootScope.$broadcast("product:deleted");
+    //   $log.info("product:deleted");
+    //
+    // };
 
     //shopping card functions//
 
@@ -75,9 +75,9 @@ angular.module("localProducts")
     };
 
     var removeFromCart = function(idx) {
-      _shoppingCart.splice(index, 1);
+      _shoppingCart.splice(idx,1);
       $rootScope.$broadcast("product:removed");
-      $log.info("product:removed")
+      $log.info("product:removed");
     };
 
 
@@ -92,14 +92,15 @@ angular.module("localProducts")
 
       getInventory:getInventory,
       getProduct:getProduct,
-      addProduct:addProduct,
+      // addProduct:addProduct,
       getShoppingCart: getShoppingCart,
       getCartProduct: getCartProduct,
       addToCart: addToCart,
-      editProduct:editProduct,
-      deleteProduct:deleteProduct
+      // editProduct:editProduct,
+      //deleteProduct:deleteProduct
+      removeFromCart: removeFromCart,
 
-    }
+    };
 
 
   });

@@ -11,10 +11,10 @@ angular.module("localProducts",
         controller: "localProductsCtrl"
       })
 
-      .when("/create", {
-        templateUrl: "views/productViews/create.html",
-        controller: "localProductsCtrl"
-      })
+      // .when("/create", {
+      //   templateUrl: "views/productViews/create.html",
+      //   controller: "localProductsCtrl"
+      // })
 
       .when("/shoppingCart", {
         templateUrl: "views/productViews/shoppingCart.html",
@@ -26,10 +26,10 @@ angular.module("localProducts",
         controller: "localProductsCtrl"
       })
 
-      .when("/showAlone/:idx/edit", {
-        templateUrl: "views/productViews/edit.html",
-        controller: "localProductsCtrl"
-      });
+      // .when("/showAlone/:idx/edit", {
+      //   templateUrl: "views/productViews/edit.html",
+      //   controller: "localProductsCtrl"
+      // });
 
 
   });

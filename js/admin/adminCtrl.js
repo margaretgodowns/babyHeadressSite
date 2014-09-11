@@ -26,10 +26,10 @@ angular.module("admin")
 
     };
 
-    $scope.deleteProduct = function(id) {
-      adminSvc.deleteProduct(id)//.then(function() {
-      adminSvc.getProducts().then($location.path("/admin"))
-
+    $scope.removeProduct = function (id) {
+      adminSvc.deleteProduct(id).then(function() {
+      adminSvc.getProducts().then($location.path("/admin"));
+    });
 
     };
 

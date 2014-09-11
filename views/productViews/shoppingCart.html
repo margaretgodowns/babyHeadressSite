@@ -2,7 +2,12 @@
 <a href="/#">Home</a>
 <a href="#/listOfProducts">Products</a>
 <div ng-repeat="product in shoppingCart">
-  {{product.name}}
-  <a href="" ng-click="removeFromCart()">Remove</a>
+  <img ng-src="{{product.image}}"/>
+  <h2>{{product.name}}</h2>
+  <h3>{{product.price}}</h3>
+  <p>
+    {{product.description}}
+  </p>
+  <a href="" ng-click="removeFromCart($index)">Remove</a>
 </div>
 </div>

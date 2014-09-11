@@ -33,10 +33,10 @@ angular.module("admin")
     };
 
     var deleteProduct = function(id) {
-      return $http.delete(urlBase + "/" + id);//.then(function(response) {
-      //   $rootScope.$broadcast("product:deleted");
-      //   $log.info("product:deleted");
-      // })
+      return $http.delete(urlBase + "/" + id).then(function(response) {
+        $rootScope.$broadcast("product:deleted");
+        $log.info("product:deleted");
+      })
 
     };
 

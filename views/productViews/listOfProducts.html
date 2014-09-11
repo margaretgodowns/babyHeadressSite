@@ -2,7 +2,7 @@
   <p>
     <a href="/#">Home</a>
     <!-- <a href="#/listOfProducts">Products</a> -->
-    <a href="#/shoppingCart/">Shopping Cart</a>
+    <a href="#/shoppingCart/">Shopping Cart ({{shoppingCart.length}})</a>
   </p>
   <div ng-repeat="product in inventory">
     <img ng-src="{{product.image}}"/>
