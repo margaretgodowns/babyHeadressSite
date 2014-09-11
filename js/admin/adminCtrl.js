@@ -20,9 +20,9 @@ angular.module("admin")
     };
 
     $scope.editProduct = function(product) {
-      adminSvc.editProduct(product);//.then(function() {
-        //$location.path("/admin")
-      //});
+      adminSvc.editProduct(product).then(function() {
+        $location.path("/admin");
+      });
 
     };
 

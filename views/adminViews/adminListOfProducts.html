@@ -3,12 +3,12 @@
 
   <div ng-repeat="product in products">
     <img ng-src="{{product.image}}"/>
-    <h2><a href="/#/admin/:{{$idx}}">{{product.name}}</a></h2>
+    <h2><a href="/#/admin/{{product._id}}">{{product.name}}</a></h2>
     <h2>{{product.price}}</h2>
     <p>
       {{product.description}}
     </p>
-    <a href="" ng-click="deleteProduct(product._id)">Delete</a>
+    <a href="" ng-click="removeProduct(product._id)">Delete</a>
   </div>
 
 </div>
