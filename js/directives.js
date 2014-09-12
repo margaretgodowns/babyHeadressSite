@@ -1,7 +1,39 @@
-// angular.module("directive", [])
-//   .direction("reviewDirective", function() {
-//     return {
-//       restrict: "EA",
-//       templateUrl: "views/reviewDirective.html",
-//     }
-//   })
+angular.module("app.directives", [])
+
+  .directive("productsDirective", function() {
+    return {
+      restrict: "E",
+      $scope: {
+        image: "@",
+        name: "@",
+        price: "@",
+      },
+      templateUrl: "views/productsDirective.html",
+    }
+  })
+
+  .directive("showAloneDirective", function() {
+    return{
+      restrict: "E",
+      $scope: {
+        image: "@",
+        name: "@",
+        price: "@",
+        description: "@",
+        reviews: "@"
+      },
+      templateUrl: "views/showAloneDirective.html",
+    }
+  })
+  //
+  // .directive("cartDirective", function() {
+  //   return {
+  //     restrict: "E",
+  //     $scope: {
+  //       image: "@",
+  //       name: "@",
+  //       price: "@",
+  //     }
+  //     templateUrl: "views/productViews/shoppingCart.html",
+  //   }
+  // })

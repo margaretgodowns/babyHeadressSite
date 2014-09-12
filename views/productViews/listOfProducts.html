@@ -5,13 +5,14 @@
     <a href="#/shoppingCart/">Shopping Cart ({{shoppingCart.length}})</a>
   </p>
   <div ng-repeat="product in inventory">
-    <img ng-src="{{product.image}}"/>
+    <!-- <img ng-src="{{product.image}}"/>
     <h2><a href="/#/showAlone/{{$index}}">{{product.name}}</a></h2>
-    <h2>{{product.price}}</h2>
-    <p>
+    <h2>{{product.price}}</h2> -->
+    <!-- <p>
       {{product.description}}
-    </p>
+    </p> -->
     <!-- <a href= "" ng-click="addToCart(product)">Add to Cart</a> -->
+    <products-Directive img = "{{product.image}}" name = "{{product.name}}" price = "{{product.price}}"></products-Directive>
   </div>
 
 </div>

@@ -2,7 +2,7 @@
   <a href="/#">Home</a>
   <a href="#/listOfProducts">Products</a>
   <a href="#/shoppingCart">Shopping Cart ({{shoppingCart.length}})</a>
-  <p><img ng-src="{{soloProduct.image}}"/></p>
+  <!-- <p><img ng-src="{{soloProduct.image}}"/></p>
   <h2>{{soloProduct.name}}</h2>
   <h2>{{soloProduct.price}}</h2>
   <p>
@@ -14,7 +14,10 @@
     <h3>
       <p>
         {{review.description}}
-      </p>
+      </p> -->
+
+      
+      <show-Alone-Directive img = "{{soloProduct.img}}" name = "{{soloProduct.name}}" price = "{{soloProduct.price}}" description = "{{soloProduct.description}}"></show-Alone-Directive>
   </div>
   <a href= "" ng-click="addToCart(soloProduct)">Add to Cart</a>
 

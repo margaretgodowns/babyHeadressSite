@@ -1,8 +1,8 @@
 angular.module("babyAmazon",
   [
     "localProducts",
+    "app.directives",
     "admin",
-    //"directive",
     "ngRoute"
   ])
 

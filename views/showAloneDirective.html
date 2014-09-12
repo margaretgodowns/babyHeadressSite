@@ -1,0 +1,13 @@
+<p><img ng-src="{{soloProduct.image}}"/></p>
+<h2>{{soloProduct.name}}</h2>
+<h2>{{soloProduct.price}}</h2>
+<p>
+  {{soloProduct.description}}
+</p>
+<div ng-repeat="review in soloProduct.reviews">
+  <h3>
+    {{review.name}}
+  <h3>
+    <p>
+      {{review.description}}
+    </p>
