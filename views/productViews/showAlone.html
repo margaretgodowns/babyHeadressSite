@@ -8,12 +8,20 @@
   <p>
     {{soloProduct.description}}
   </p>
+  <div ng-repeat="review in soloProduct.reviews">
+    <h3>
+      {{review.name}}
+    <h3>
+      <p>
+        {{review.description}}
+      </p>
+  </div>
   <a href= "" ng-click="addToCart(soloProduct)">Add to Cart</a>
 
-  <form action="" ng-submit="addReview(review)">
+  <form action="" ng-submit="addReview(newReview)">
   <h1>Review</h1>
-  <textarea name="" id="" cols="30" rows="10" placeholder="Write review." ng-model="review.description"></textarea>
-  <input type="text" placeholder="Your name" ng-model="review.name">
+  <textarea name="" id="" cols="30" rows="10" placeholder="Write review." ng-model="newReview.description"></textarea>
+  <input type="text" placeholder="Your name" ng-model="newReview.name">
   <button type="submit">Submit</button>
   </form>
 </div>
