@@ -2,13 +2,18 @@
   <a href="/#">Home</a>
   <a href="#/listOfProducts">Products</a>
   <a href="#/shoppingCart">Shopping Cart ({{shoppingCart.length}})</a>
-  <img ng-src="{{soloProduct.image}}"/>
+  <p><img ng-src="{{soloProduct.image}}"/></p>
   <h2>{{soloProduct.name}}</h2>
   <h2>{{soloProduct.price}}</h2>
   <p>
     {{soloProduct.description}}
   </p>
   <a href= "" ng-click="addToCart(soloProduct)">Add to Cart</a>
-  <!-- <a href="#/showAlone/{{idx}}/edit">Edit</a>
-  <a href="" ng-click="deleteProduct()">Delete</a> -->
+
+  <form action="" ng-submit="addReview(review)">
+  <h1>Review</h1>
+  <textarea name="" id="" cols="30" rows="10" placeholder="Write review." ng-model="review.description"></textarea>
+  <input type="text" placeholder="Your name" ng-model="review.name">
+  <button type="submit">Submit</button>
+  </form>
 </div>

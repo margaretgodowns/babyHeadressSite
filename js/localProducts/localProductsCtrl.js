@@ -6,7 +6,7 @@ angular.module("localProducts")
     $scope.shoppingCart = localProductsSvc.getShoppingCart();
     $scope.soloProduct = localProductsSvc.getProduct($routeParams.idx);
     $scope.idx = $routeParams.idx;
-    console.log($scope.soloProduct)
+    // console.log($scope.soloProduct)
 
     // $scope.create = function(product){
     //
@@ -39,7 +39,8 @@ angular.module("localProducts")
       });
 
       $location.path("/listOfProducts")
-      //or ("/showAlone")
+      //$location.path("/showAlone/{{idx}}") --this removes everything but stays on showAlone page
+
     };
 
     $rootScope.$on("product:addedToCart", function(){
@@ -56,41 +57,12 @@ angular.module("localProducts")
 
     });
 
-    // $scope.editProduct= function(product){
-    //
-    //   localProductsSvc.editProduct({
-    //
-    //     name: product.name,
-    //     price: product.price,
-    //     description: product.description,
-    //     image: product.image
-    //
-    //   },
-    //
-    //   $scope.idx
-    //
-    //   );
-    //
-    //     $location.path("/");
-    //
-    // };
-    //
-    // $rootScope.$on("product:edited", function(){
-    //
-    //   $scope.inventory = localProductsSvc.getInventory();
-    //
-    // });
+    $scope.addReview = function (review) {
+        var index = $routeParams.idx;
+        localProductsSvc.addReview(index,review);
+        $scope.newReview = {}
+      }
 
-    // $scope.deleteProduct = function() {
-    //
-    //   localProductsSvc.deleteProduct($scope.idx);
-    //
-    // };
-    //
-    // $rootScope.$on("product:deleted", function() {
-    //   $scope.inventory = localProductsSvc.getInventory();
-    //
-    // });
 
 
   });

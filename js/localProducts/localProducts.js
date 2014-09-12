@@ -26,10 +26,6 @@ angular.module("localProducts",
         controller: "localProductsCtrl"
       })
 
-      // .when("/showAlone/:idx/edit", {
-      //   templateUrl: "views/productViews/edit.html",
-      //   controller: "localProductsCtrl"
-      // });
 
 
   });

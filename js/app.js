@@ -2,6 +2,7 @@ angular.module("babyAmazon",
   [
     "localProducts",
     "admin",
+    //"directive",
     "ngRoute"
   ])
 

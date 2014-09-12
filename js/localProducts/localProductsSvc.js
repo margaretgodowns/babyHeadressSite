@@ -37,6 +37,10 @@ angular.module("localProducts")
       return _inventory[index];
     };
 
+    var addReview = function (idx, review) {
+      _inventory[idx].reviews.push(review);
+     }
+
     // var addProduct = function(newProduct){
     //   _inventory.push(newProduct);
     //   $rootScope.$broadcast("product:added");
@@ -56,7 +60,7 @@ angular.module("localProducts")
     //
     // };
 
-    //shopping card functions//
+    //shopping cart functions//
 
     var _shoppingCart = [];
 
@@ -99,6 +103,7 @@ angular.module("localProducts")
       // editProduct:editProduct,
       //deleteProduct:deleteProduct
       removeFromCart: removeFromCart,
+      addReview:addReview
 
     };
 
