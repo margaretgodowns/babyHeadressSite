@@ -6,7 +6,8 @@ angular.module("app.directives", [])
       $scope: {
         image: "@",
         name: "@",
-        price: "@",
+        description: "@",
+        price: "@"
       },
       templateUrl: "views/productsDirective.html",
     }
@@ -25,7 +26,7 @@ angular.module("app.directives", [])
       templateUrl: "views/showAloneDirective.html",
     }
   })
-  //
+
   // .directive("cartDirective", function() {
   //   return {
   //     restrict: "E",
@@ -36,4 +37,4 @@ angular.module("app.directives", [])
   //     }
   //     templateUrl: "views/productViews/shoppingCart.html",
   //   }
-  // })
+  // });

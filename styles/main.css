@@ -2,7 +2,9 @@ img {
   height: 200px; }
 
 body {
-  background-image: url("../images/homeBackground.jpg"); }
+  background-image: url("../images/homeBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .container {
   background-color: white;
@@ -10,6 +12,13 @@ body {
   text-align: center; }
   .container a {
     color: black; }
+
+.siteTitle {
+  text-align: right;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  font-weight: lighter;
+  font-size: 24px; }
 
 .enterNav {
   text-align: center; }

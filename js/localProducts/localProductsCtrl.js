@@ -6,27 +6,7 @@ angular.module("localProducts")
     $scope.shoppingCart = localProductsSvc.getShoppingCart();
     $scope.soloProduct = localProductsSvc.getProduct($routeParams.idx);
     $scope.idx = $routeParams.idx;
-    // console.log($scope.soloProduct)
-
-    // $scope.create = function(product){
-    //
-    //   localProductsSvc.addProduct({
-    //
-    //     name: product.name,
-    //     price: product.price,
-    //     description: product.description,
-    //     image: product.image
-    //
-    //   });
-    //
-    //   $location.path("/")
-    //
-    // };
-
-    // $rootScope.$on("product:added", function(){
-    //   $scope.inventory = localProductsSvc.getInventory();
-    //
-    // });
+    
 
     $scope.addToCart = function(product) {
       localProductsSvc.addToCart({

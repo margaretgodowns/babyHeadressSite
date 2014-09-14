@@ -1,25 +1,23 @@
-<div class="container">
+<div class = "container">
+
+
+<div class="row">
   <a href="/#">Home</a>
   <a href="#/listOfProducts">Products</a>
   <a href="#/shoppingCart">Shopping Cart ({{shoppingCart.length}})</a>
-  <!-- <p><img ng-src="{{soloProduct.image}}"/></p>
-  <h2>{{soloProduct.name}}</h2>
-  <h2>{{soloProduct.price}}</h2>
-  <p>
-    {{soloProduct.description}}
-  </p>
-  <div ng-repeat="review in soloProduct.reviews">
-    <h3>
-      {{review.name}}
-    <h3>
-      <p>
-        {{review.description}}
-      </p> -->
+</div>
 
-      
+<div class = "row">
       <show-Alone-Directive img = "{{soloProduct.img}}" name = "{{soloProduct.name}}" price = "{{soloProduct.price}}" description = "{{soloProduct.description}}"></show-Alone-Directive>
-  </div>
+
+
   <a href= "" ng-click="addToCart(soloProduct)">Add to Cart</a>
+
+</div>
+
+<div class = "row">
+
+
 
   <form action="" ng-submit="addReview(newReview)">
   <h1>Review</h1>
@@ -27,4 +25,5 @@
   <input type="text" placeholder="Your name" ng-model="newReview.name">
   <button type="submit">Submit</button>
   </form>
+</div>
 </div>

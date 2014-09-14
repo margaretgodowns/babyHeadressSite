@@ -1,12 +1,16 @@
-<div class="container">
+<div class = "container">
+
+
+<div class="row">
 <a href="/#">Home</a>
 <a href="#/listOfProducts">Products</a>
+</div>
+<div class = "row">
 <div ng-repeat="product in shoppingCart">
-  <!-- <img ng-src="{{product.image}}"/>
-  <h2>{{product.name}}</h2>
-  <h3>{{product.price}}</h3> -->
+
   <cart-Directive img = "{{product.image}}" name = "{{product.name}}" price = "{{product.price}}"></cart-Directive>
 
   <a href="" ng-click="removeFromCart($index)">Remove</a>
+</div>
 </div>
 </div>

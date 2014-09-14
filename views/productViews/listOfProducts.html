@@ -1,18 +1,19 @@
-<div class="container">
+<div class = "container">
+
+
+<div class="row">
   <p>
     <a href="/#">Home</a>
-    <!-- <a href="#/listOfProducts">Products</a> -->
+
     <a href="#/shoppingCart/">Shopping Cart ({{shoppingCart.length}})</a>
   </p>
+
+</div>
+
+<div class = "row">
   <div ng-repeat="product in inventory">
-    <!-- <img ng-src="{{product.image}}"/>
-    <h2><a href="/#/showAlone/{{$index}}">{{product.name}}</a></h2>
-    <h2>{{product.price}}</h2> -->
-    <!-- <p>
-      {{product.description}}
-    </p> -->
-    <!-- <a href= "" ng-click="addToCart(product)">Add to Cart</a> -->
     <products-Directive img = "{{product.image}}" name = "{{product.name}}" price = "{{product.price}}"></products-Directive>
   </div>
 
+</div>
 </div>

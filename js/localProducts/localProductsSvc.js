@@ -45,25 +45,6 @@ angular.module("localProducts")
       _inventory[idx].reviews.push(review);
     };
 
-    // var addProduct = function(newProduct){
-    //   _inventory.push(newProduct);
-    //   $rootScope.$broadcast("product:added");
-    //   $log.info("product:added");
-    // };
-
-    // var editProduct = function(product, idx){
-    //   _inventory[idx]=product;
-    //   $rootScope.$broadcast("product:edited");
-    //   $log.info("product:edited");
-    // };
-
-    // var deleteProduct = function(idx){
-    //   _inventory.splice(index, 1);
-    //   $rootScope.$broadcast("product:deleted");
-    //   $log.info("product:deleted");
-    //
-    // };
-
     //shopping cart functions//
 
     var _shoppingCart = [];
@@ -89,23 +70,13 @@ angular.module("localProducts")
     };
 
 
-
-
-
-
-
-
-
-    return {
+  return {
 
       getInventory:getInventory,
       getProduct:getProduct,
-      // addProduct:addProduct,
       getShoppingCart: getShoppingCart,
       getCartProduct: getCartProduct,
       addToCart: addToCart,
-      // editProduct:editProduct,
-      //deleteProduct:deleteProduct
       removeFromCart: removeFromCart,
       addReview:addReview
 
